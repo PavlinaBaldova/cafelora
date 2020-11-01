@@ -1,5 +1,7 @@
 import './index.html';
 import './style.css';
+import { Layer } from './Layer';
+import { Drink } from './Drink';
 
 console.log('funguju!');
 
@@ -59,7 +61,7 @@ const layers = [
   },
 ];
 
-const Layer = (props) => {
+/*const Layer = (props) => {
   return `
   <div class="layer">
   <div
@@ -69,7 +71,7 @@ const Layer = (props) => {
   <div class="layer__label">${props.label}
   </div>
   </div>`;
-};
+};*/
 
 const inbox = document.querySelector('#drink__info');
 for (let i = 0; i < layers.length; i += 1) {
