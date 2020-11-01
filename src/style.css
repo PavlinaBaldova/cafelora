@@ -234,7 +234,6 @@ nav a:hover {
 .gallery {
   padding-top: 0;
   height: 100vh;
-
   color: white;
   background-image: url('./img/gallery.jpg');
   background-size: cover;
@@ -255,6 +254,21 @@ nav a:hover {
 .contacts__map {
   max-width: 90%;
   height: auto;
+}
+
+.photo__description {
+  font-size: 30px;
+  font-family: 'Great Vibes', fantasy;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+}
+
+figure {
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -300,6 +314,10 @@ nav a:hover {
     display: none;
   }
 
-
-
+  .photo__description {
+    font-size: 60px;
+    font-family: 'Great Vibes', fantasy;
+    padding: 100px;
+    text-align: center;
+  }
 }
