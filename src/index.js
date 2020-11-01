@@ -32,7 +32,7 @@ const drinkCup = () => {
   drinkCupElm.classList.toggle('drink__cup--selected');
   const btnCancel = document.querySelector('.order-btn');
   ordered = !ordered;
-  if (ordered === true) {
+  if (ordered) {
     btnCancel.textContent = 'Zrušit';
   } else {
     btnCancel.textContent = 'Objednat';
@@ -41,3 +41,39 @@ const drinkCup = () => {
 
 const orderButton = document.querySelector('.order-btn');
 orderButton.addEventListener('click', drinkCup);
+
+/*------------ingredience jako komponenty------------*/
+
+const layers = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916"',
+    label: 'espresso',
+  },
+];
+
+const Layer = (props) => {
+  return `
+  <div class="layer">
+  <div
+  class="layer__color"
+  style="background-color: ${props.color}">
+  </div>
+  <div class="layer__label">${props.label}
+  </div>
+  </div>`;
+};
+
+const inbox = document.querySelector('#drink__info');
+for (let i = 0; i < layers.length; i += 1) {
+  const drink = layers[i];
+  inbox.innerHTML += Layer(drink);
+  console.log(drink);
+}
